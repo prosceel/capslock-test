@@ -35,7 +35,7 @@ html {
 
   &::before {
     position: absolute;
-    content: url('../img/page-shadow.png');
+    content: url('../../src/img/page-shadow.png');
     top: 0;
     left: 0;
     z-index: -1;
