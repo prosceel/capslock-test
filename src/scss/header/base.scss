@@ -72,6 +72,19 @@
     font-size: 16px;
     font-weight: 500;
     padding: 10px 10px;
+    transition: $transition-config;
+
+    &:active,
+    &:focus,
+    &:hover {
+      background: #39425D;
+      color: #FFF1DA;
+    }
+
+    &:focus,
+    &:active {
+      box-shadow: 0 0 0 3px rgba(57, 66, 93, 0.5);
+    }
   }
 
   &__lang-select-button {
