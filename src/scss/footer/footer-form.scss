@@ -44,7 +44,7 @@
     @media (max-width: 767px) {
       min-width: auto;
       width: 100%;
-      padding: 20px 20px 22px 50px;
+      padding: 17px 20px 16px 50px;
     }
 
     &:focus,
@@ -68,6 +68,11 @@
     cursor: pointer;
     transition: $transition-config;
     position: relative;
+
+    @media (max-width: 767px) {
+      padding-top: 19px;
+      padding-bottom: 19px;
+    }
 
     &::after {
       content: '';
