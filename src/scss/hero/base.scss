@@ -26,9 +26,9 @@
     }
 
     @media (max-width: 1023px) {
-      //15px at 1023px screen and 60px at 768px screen: top 15 1023 60 768
-      top: calc(100vw * -0.1765 + 195.5294px);
-      right: 0;
+      //15px at 1023px screen and 70px at 768px screen: top 15 1023 70 768
+      top: calc(100vw * -0.2157 + 235.6471px);
+      right: -10px;
     }
 
     @media (max-width: 767px) {
