@@ -64,27 +64,53 @@
 
   &__form-item-button {
     background: linear-gradient(180deg, #FF946D 0%, #FF7D68 100%);
-    color: #ffffff;
+    color: #fff;
     font-size: 17px;
     font-weight: 500;
     font-family: $main-font;
     border: none;
+    outline: none;
     border-radius: 10px;
     min-width: 180px;
     padding: 24px 10px;
     cursor: pointer;
     transition: $transition-config;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+      background: #fff;
+      opacity: 0;
+      border-radius: 10px;
+      transition: $transition-config;
+      border: 1px solid #FF7D68;
+      box-sizing: border-box;
+    }
+
+    &-text {
+      position: relative;
+      z-index: 1;
+    }
 
     &:hover,
     &:active,
-    &:focus{
+    &:focus {
       color: #FF7D68;
-      background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);outline: none;
+
+      &::after {
+        opacity: 1;
+      }
     }
 
     &:active,
     &:focus {
-      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+      box-shadow: 0 0 0 3px rgba(255, 125, 104, 0.3);
     }
   }
 
@@ -125,6 +151,19 @@
     position: absolute;
     top: -13px;
     right: -29px;
+    transition: $transition-config;
+    outline: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      opacity: 0.9;
+    }
+
+    &:active,
+    &:focus {
+      box-shadow: 0 0 0 3px rgba(103, 85, 230, 0.3);
+    }
   }
 
   &__contact-link-icon {
