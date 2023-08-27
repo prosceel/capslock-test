@@ -3,6 +3,10 @@
   justify-content: space-between;
   align-items: flex-start;
 
+  @media (max-width: 767px) {
+    justify-content: center;
+  }
+
   &__image-wrapper {
     position: relative;
     height: 100%;
@@ -32,6 +36,7 @@
   @media (max-width: 767px) {
     max-width: 100%;
     align-items: center;
+    margin-top: 50px;
   }
 
   &__tagline {
@@ -58,7 +63,6 @@
     font-weight: 700;
     line-height: 1.06;
     letter-spacing: -3.36px;
-    max-width: 550px;
     margin: 28px 0 0 0;
     @media (max-width: 1439px) {
       //84px at 1440px screen and 50px at 375px screen: font-size 84 1440 50 375
@@ -102,13 +106,23 @@
     line-height: 1.88;
     max-width: 475px;
     margin: 30px 0 0 0;
+
+    @media (max-width: 767px) {
+      text-align: center;
+    }
   }
 
   &__button-wrapper {
     display: flex;
-    gap: 38px;
+    gap: 45px;
     align-items: center;
     margin-top: 34px;
+
+    @media (max-width: 767px) {
+      gap: 25px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__button-wrapper-continue {
@@ -125,6 +139,13 @@
     padding: 19px 10px;
     cursor: pointer;
     transition: $transition-config;
+
+    @media (max-width: 1439px) {
+      //170px at 1440px screen and 150px at 375px screen: min-width 170 1440 150 375
+      min-width: calc(100vw * 0.0188 + 142.9577px);
+      //17px at 1440px screen and 15px at 375px screen: font-size 17 1440 15 375
+      font-size: calc(100vw * 0.0019 + 14.2958px);
+    }
 
     &:hover,
     &:active,
@@ -151,6 +172,11 @@
     font-family: $main-font;
     color: #686D77;
     gap: 20px;
+    padding: 0;
+
+    @media (max-width: 1439px) {
+      font-size: calc(100vw * 0.0019 + 14.2958px);
+    }
 
     &:hover,
     &:active,
