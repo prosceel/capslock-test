@@ -73,6 +73,19 @@
     min-width: 180px;
     padding: 24px 10px;
     cursor: pointer;
+    transition: $transition-config;
+
+    &:hover,
+    &:active,
+    &:focus{
+      color: #FF7D68;
+      background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);outline: none;
+    }
+
+    &:active,
+    &:focus {
+      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+    }
   }
 
   &__left-circle {
