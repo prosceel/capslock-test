@@ -10,18 +10,12 @@ html {
 }
 
 .wrapper {
-  max-width: calc(var(--wrapper-width));
+  max-width: calc(var(--wrapper-width) + (var(--wrapper-padding) * 2));
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
   padding-left: var(--wrapper-padding);
   padding-right: var(--wrapper-padding);
-
-  @media (min-width: #{1150px + $wrapper-padding * 2}) {
-    padding-left: var(--wrapper-padding);
-    padding-right: var(--wrapper-padding);
-    max-width: calc(var(--wrapper-width) + (var(--wrapper-padding) * 2));
-  }
 }
 
 .page-wrapper {
