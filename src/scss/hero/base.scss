@@ -32,6 +32,11 @@
     font-weight: 700;
     color: #DF6951;
     margin: 0;
+
+    @media (max-width: 1439px) {
+      //20px at 1440px screen and 15px at 375px screen: font-size 20 1440 15 375
+      font-size: calc(100vw * 0.0047 + 13.2394px);
+    }
   }
 
   &__title {
@@ -42,6 +47,11 @@
     letter-spacing: -3.36px;
     max-width: 550px;
     margin: 28px 0 0 0;
+
+    @media (max-width: 1439px) {
+      //84px at 1440px screen and 50px at 375px screen: font-size 84 1440 50 375
+      font-size: calc(100vw * 0.0319 + 38.0282px);
+    }
   }
 
   &__title-underline {
@@ -49,10 +59,22 @@
 
     &::after {
       z-index: -1;
-      left: -35px;
-      bottom: 1px;
+      left: -33px;
+      bottom: 19px;
       position: absolute;
-      content: url("/../../../img/title-underline.png");
+      content: '';
+      background: url("/../../../img/title-underline.png") no-repeat center bottom;
+      width: 385px;
+      height: 12px;
+
+      @media (max-width: 1439px) {
+        //-33px at 1440px screen and -12px at 375px screen: left -33 1440 -12 375
+        left: calc(100vw * -0.0197 - 4.6056px);
+        //19px at 1440px screen and 7px at 375px screen: bottom 19 1440 7 375
+        bottom: calc(100vw * 0.0113 + 2.7746px);
+        //385px at 1440px screen and 155px at 375px screen: width 385 1440 155 375
+        width: calc(100vw * 0.216 + 74.0141px);
+      }
     }
   }
 
