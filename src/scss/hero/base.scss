@@ -85,6 +85,7 @@
     line-height: 1.06;
     letter-spacing: -3.36px;
     margin: 28px 0 0 0;
+    
     @media (max-width: 1439px) {
       //84px at 1440px screen and 50px at 375px screen: font-size 84 1440 50 375
       font-size: calc(100vw * 0.0319 + 38.0282px);
